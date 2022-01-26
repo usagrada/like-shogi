@@ -8,3 +8,12 @@ edition = "2021"
 [dependencies]
 yew = "0.19"
 stylist = { version = "0.10", features = ["yew_integration"] }
+log = "0.4.6"
+wasm-logger = "0.2.0"
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+incremental = false
+opt-level = "s"

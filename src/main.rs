@@ -1,5 +1,3 @@
-#![feature(in_band_lifetimes)]
-
 use yew::prelude::*;
 mod component;
 mod koma;
@@ -25,4 +23,5 @@ impl Component for App {
 
 fn main() {
   yew::start_app::<App>();
+  wasm_logger::init(wasm_logger::Config::default());
 }
